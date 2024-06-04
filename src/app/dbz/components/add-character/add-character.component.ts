@@ -16,11 +16,8 @@ export class addCharacterComponent {
     power: 0
   };
   emitCharacter ():void {
-
     if ( this.character.name.length === 0) return;
-
     this.onNewCharacter.emit(this.character);
-
     this.character = {
       name: '',
       power: 0

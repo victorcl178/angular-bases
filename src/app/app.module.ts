@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
-
 import { BrowserModule } from '@angular/platform-browser';
+
 import { CounterModule} from './counter/counter.module';
-import { AppRoutingModule } from './app-routing.module';
 import { HeroModule } from './heroes/Hero.module';
 import { DbzModule } from './dbz/dbz.module';
 
@@ -15,7 +14,6 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     CounterModule,
     HeroModule,
     DbzModule

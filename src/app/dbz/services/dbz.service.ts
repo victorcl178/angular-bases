@@ -7,7 +7,7 @@ import { Character } from '../interfaces/character.interface';
   providedIn: 'root'
 })
 
-export class dbzService {
+export class DbzService {
 
   public characters: Character[] = [{
     id: uuid(),
@@ -25,15 +25,15 @@ export class dbzService {
 ];
 
   addCharacter(character: Character):void {
-    const newCharacter: Character = { id: uuid(), ...character  }
-    this.characters.push(character);
+    const newCharacter: Character = { id: uuid(), ...character  };
+    this.characters.push(newCharacter);
   }
 
   // onDeleteCharacter( index:number ) {
   //   this.characters.splice(index,1);
   // }
 
-  deleteCharacterbyId( id:string) {
+  deleteCharacterById( id:string) {
     this.characters = this.characters.filter( character => character.id !== id );
   }
 }
